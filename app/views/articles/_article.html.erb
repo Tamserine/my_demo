@@ -1,0 +1,35 @@
+<article id="article_id-<%= article.id %>" class="overflow-hidden rounded-lg shadow-lg">
+            <% article.photos.each do |photo| %>
+            <% if photo.width > photo.height %>
+            <%@orientation = "hero-landscape w-full"%>
+            <%else%>
+            <%@orientation = "hero-portrait items-center"%>
+            <%end%>
+            <!-- really lazy way of just getting the last photo available - this should be a slideshow of all photos really -->
+            <!--image_tag(photo.image_s, class: "block h-auto w-full" alt: article.description)%>-->
+            <%@image_url = photo.image_m %>
+            <%end%>
+            <%if @image_url%>
+            <%=image_tag(@image_url, class: "block h-auto #{@orientation}",alt: article.description)%>
+            <%end%>
+    <header class="flex items-center justify-between leading-tight p-2 md:p-4">
+        <h1 class="text-lg">
+            <a class="no-underline hover:underline text-black" href="#">
+               <%= article.title %>
+            </a>
+        </h1>
+        <p class="text-grey-darker text-sm">
+             <%= article.description%><br>
+             <!--<%= article.section%><%= article.status%>--><br>
+            <b>Collection: </b><%=article.location.town%>/<%= article.collection_notes%> <br>
+        </p>
+    </header>
+    <footer class="flex items-center justify-between leading-none p-2 md:p-4">
+
+        <a class="flex items-center no-underline hover:underline text-black" href="#">
+        <%= render partial: "avatar", locals: {article: article} %>
+        <%= render partial: "fav", locals: {article: article} %>
+        </a>
+    </footer>
+
+</article>
