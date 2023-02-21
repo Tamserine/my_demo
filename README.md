@@ -46,7 +46,7 @@ To run the test suite
 
 * `rails db:migrate`                         # Migrate the database (options: VERSION=x, VERBOSE=false, SCOPE=blog)
 
-* `rails db:reset`                           # emmpty all the database tables
+* `rails db:reset`                           # empty all the database tables
 
 You call also start the webserver with
 
