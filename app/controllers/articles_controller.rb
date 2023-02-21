@@ -5,16 +5,30 @@ class ArticlesController < ApplicationController
   def index
     @articles = Article.all
 
-    @favorites = if request.cookies['favorites']
+    @favorites =  parse_cookie
+    
+    #@favorites = if request.cookies['favorites']
 
-                   JSON.parse(request.cookies['favorites'])
+    #             JSON.parse(request.cookies['favorites'])
 
-                 else
-                   []
-                 end
+    #             else
+    #               []
+    #             end
 
     # puts "hi there #{articles_url}  #{cookies[:faves]}"
   end
+
+  def parse_cookie
+       
+      if request.cookies['favorites']
+         cookie = JSON.parse(request.cookies['favorites'])
+     else
+       cookie = []
+     end
+    
+    return cookie
+   
+  end 
 
   def toggle_favorite
     # puts "current cookie #{request.cookies['favorites']} trying to add #{params[:id]}"
