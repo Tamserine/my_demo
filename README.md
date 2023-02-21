@@ -1,40 +1,42 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
+* System dependencies
+This was built on a mac and has not been tested on other platforms
 
  Ruby 3.1.2
  Rails  7.0.4.2
  Tailwind 2.0.23
+ and sqlite3
+ 
+Clone the Git Repo and then:
 
-* System dependencies
+To get the ruby gems
+`Bundle Install`
 
-This was built on a mac -  has not been tested on other platforms
+To set up the Database
+`Rails db:migrate`
 
-* Configuration
+Import the Data
+`Rake demon_import import`
 
-* Database creation
+To start the server
+`Rails server`
 
-rails db:create                          # Creates the database
-rails db:drop                            # Drops the database
-rails db:migrate                         # Migrate the database (options: VERSION=x, VERBOSE=false, SCOPE=blog)
-rails db:reset
+The demo should be available at localhost:3000
 
-* Database initialization
+To run the test suite
 
-* How to run the test suite
+`bundle exec rspec`
 
-bundle exec rspec
+* Other userful Database commands
 
-* Services (job queues, cache servers, search engines, etc.)
+`rails db:create`                          # Creates the database
+`rails db:drop`                            # Drops the database
+`rails db:migrate`                         # Migrate the database (options: VERSION=x, VERBOSE=false, SCOPE=blog)
+`rails db:reset`                           # emmpty all the database tables
 
-There are no services.
+You call also start the webserver with
 
-* Deployment instructions
+foreman start -f Procfile.dev
 
-This was written to run on a local development machine.
-Run rails server from a shell
+Which should allow you to change front end code and have it recompile
