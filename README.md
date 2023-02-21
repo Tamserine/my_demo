@@ -38,7 +38,7 @@ To run the test suite
 
 `bundle exec rspec`
 
-## Other userful Database commands
+## Other userful commands
 
 * `rails db:create`                          # Creates the database
 
