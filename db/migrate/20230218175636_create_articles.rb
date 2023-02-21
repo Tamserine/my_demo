@@ -8,6 +8,7 @@ class CreateArticles < ActiveRecord::Migration[7.0]
       t.text :description
       t.text :donation_description
       t.bigint :collection_id
+      t.bigint :user_id
       t.string :section
       t.text :collection_notes
       t.decimal :price
