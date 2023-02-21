@@ -11,7 +11,9 @@
 * Tailwind 2.0.23
  
 * and sqlite3
- 
+
+## To get up and running
+
 ### Clone the Git Repo and then open a shell and run the following commands:
 
 To get the ruby gems
@@ -24,7 +26,7 @@ To set up the Database
 
 Import the Data
 
-`Rake demo_import import`
+`Rake demo_import:import`
 
 To start the server
 
