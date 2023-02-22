@@ -14,17 +14,17 @@
 
 ## To get up and running
 
-### Clone the Git Repo and then open a shell and run the following commands:
+### Clone the git repo, open a shell and run the following commands:
 
-To get the ruby gems
+To install the ruby gems
 
 `Bundle Install`
 
-To set up the Database
+To set up the database
 
 `Rails db:migrate`
 
-Import the Data
+Import the data
 
 `Rake demo_import:import`
 
@@ -32,7 +32,7 @@ To start the server
 
 `Rails server`
 
- The demo should be available at localhost:3000
+The demo should be available at localhost:3000
 
 To run the test suite
 
