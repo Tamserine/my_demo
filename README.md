@@ -10,7 +10,7 @@
  
 * Tailwind 2.0.23
  
-* and sqlite3
+* SQLite 3.36
 
 ## To get up and running
 
@@ -18,19 +18,19 @@
 
 To install the ruby gems
 
-`Bundle Install`
+`bundle install`
 
 To set up the database
 
-`Rails db:migrate`
+`rails db:migrate`
 
 Import the data
 
-`Rake demo_import:import`
+`rake demo_import:import`
 
 To start the server
 
-`Rails server`
+`rails server`
 
 The demo should be available at localhost:3000
 
